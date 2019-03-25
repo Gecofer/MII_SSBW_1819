@@ -207,6 +207,7 @@ $ docker-compose run web python hola_mundo.py
 Hola mundo
 ~~~
 
+<!----
 ----
-
 **Para la próxima clase `ipython`**
+----->

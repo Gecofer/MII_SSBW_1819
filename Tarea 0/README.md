@@ -1,5 +1,7 @@
 ## Tarea 0: Entorno de desarrollo con docker-compose
 
+> **Pincha [aquí](https://github.com/Gecofer/MII_SSBW_1819/blob/master/Tarea%200/Tarea0.md) para ver cómo se hizo la Tarea 0**
+
 Usaremos [docker-compose](https://docs.docker.com/compose/) como entorno de desarrollo durante toda la asignatura.
 
 Empezamos [instalando docker-compose](https://docs.docker.com/compose/install/). También está en el apt-get de ubuntu, pero [puede no estar en la última versión](https://linuxize.com/post/how-to-install-and-use-docker-compose-on-ubuntu-18-04/).
@@ -52,5 +54,3 @@ o
 ~~~
 $ docker-compose run web python hola_mundo.py
 ~~~
-
-**Pincha [aquí]() para ver su funcionamiento**
