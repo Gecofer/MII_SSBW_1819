@@ -1,6 +1,6 @@
 ## Tarea 1: Ejercicios de Python
 
->
+> **Pincha [aquí](https://github.com/Gecofer/MII_SSBW_1819/blob/master/Tarea%201/Tarea1.md) para ver cómo se hizo la Tarea 1**
 
 Prepararemos nuestro entorno de desarrollo para que la entrada y salida de los ejercicios de python sean a través del navegador. Para esto crearemos una aplicación dentro del proyecto de la tarea anterior:
 
