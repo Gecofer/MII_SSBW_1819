@@ -12,8 +12,8 @@ Seguiremos los pasos de [Quickstart: Compose and Django](https://docs.docker.com
 version: '3'
 
 services:
-	web:
-		build: .
+  web:
+    build: .
 		command: python3 manage.py runserver 0.0.0.0:8000
 		volumes:
 			- .:/code
