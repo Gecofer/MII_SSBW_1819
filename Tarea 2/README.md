@@ -4,28 +4,28 @@
 
 Haremos algunos de los ejercicios de [Basic Python Exercises](https://developers.google.com/edu/python/exercises/basic).
 
-#### Ejercicio 1
+### Ejercicio 1
 
 Given a list of strings, return the count of the number of strings where the string length is 2 or more and the first and last chars of the string are the same.
 
 Note: python does not have a ++ operator, but += works.
 
 
-#### Ejercicio 2
+### Ejercicio 2
 
 Given a list of numbers, return a list where all adjacent == elements have been reduced to a single element, so [1, 2, 2, 3] returns [1, 2, 3]. You may create a new list or modify the passed in list.
 
 
-#### Ejercicio 3
+### Ejercicio 3
 
 Given a string s, return a string made of the first 2 and the last 2 chars of the original string, so 'spring' yields 'spng'. However, if the string length is less than 2, return instead the empty string.
 
 
-#### Ejercicio 4
+### Ejercicio 4
 Given a string, if its length is at least 3, add 'ing' to its end. Unless it already ends in 'ing', in which case add 'ly' instead. If the string length is less than 3, leave it unchanged.
 
 
-#### Ejercicio 5
+### Ejercicio 5
 
 Read any text file specified on the command line. Do a simple split() on whitespace to obtain all the words in the file. Rather than read the file line by line, it's easier to read it into one giant string and split it once.
 

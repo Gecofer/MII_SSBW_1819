@@ -138,6 +138,133 @@ Por ejemplo, la lista original es ['a', 'aaa', 'aa', 'aaaa', 'a', 'a', 'a', 'aaa
 
 ### Ejercicio 3 <a name="ej3"></a>
 
+Dada una cadena s, devuelve una cadena hecha de los 2 primeros y los 2 últimos caracteres de la cadena original, de modo que 'spring' produce 'spng'. Sin embargo, si la longitud de la cadena es inferior a 2, devuelva en su lugar la cadena vacía.
+
+~~~python
+# urls.py
+
+# entrada str
+path('tarea2/ejercicio3/<entrada>', views.tarea2_ejercicio3),
+~~~
+
+~~~python
+# views.py
+
+def tarea2_ejercicio3(request, entrada):
+
+    '''
+    Given a string s, return a string made of the first 2
+    and the last 2 chars of the original string,
+    so 'spring' yields 'spng'. However, if the string length
+    is less than 2, return instead the empty string.
+    '''
+
+    # http://localhost:8000/ejercicios/tarea2/ejercicio3/s
+    # {}
+
+    # http://localhost:8000/ejercicios/tarea2/ejercicio3/sol
+    # sol
+
+    # http://localhost:8000/ejercicios/tarea2/ejercicio3/sola
+    # sola
+
+    # http://localhost:8000/ejercicios/tarea2/ejercicio3/spring
+    # spng
+
+    # http://localhost:8000/ejercicios/tarea2/ejercicio3/clase
+    # clse
+
+    # Si la cadena es menor a 2, devolvemos vacío
+    if len(entrada) < 2:
+        entrada = {}
+    # Si la cadena es 3 ó 4, devolvemos la palabras
+    elif (len(entrada) == 3 or len(entrada)) == 4:
+        entrada = entrada
+    # Si la cadena es mayor a 4
+    elif len(entrada) > 4:
+        entrada = entrada[0] + entrada[1] + entrada[-2] + entrada[-1]
+
+    salida = '%s' % (entrada)
+
+    return (HttpResponse(salida)) # Devolvemos la variable para HTTP
+~~~
+
+Si ponemos a la entrada, una cadena con longitud inferior a 2, devolvemos a la salida una lista vacía.
+
+- http://localhost:8000/ejercicios/tarea2/ejercicio3/s
+
+  ![](imagenes/3_0.png)
+
+Si ponemos a la entrada, una cadena con longitud igual a 2, 3 ó 4, devolvemos a la salida la misma cadena que se ha introducido.  
+
+- http://localhost:8000/ejercicios/tarea2/ejercicio3/sol
+
+  ![](imagenes/3_2.png)
+
+Si introducimos por entrada _spring_, la salido escribe _spng_, es decir, la nueva cadena está compuesta por los 2 primeros y los 2 últimos caracteres de la cadena original.
+
+- http://localhost:8000/ejercicios/tarea2/ejercicio3/spring
+
+  ![](imagenes/3_1.png)
+
 ### Ejercicio 4 <a name="ej4"></a>
+
+Dada una cadena, si su longitud es de al menos 3, añada 'ing' a su extremo. A menos que ya termine en "ing", en cuyo caso añada "ly" en su lugar. Si la longitud de la cadena es inferior a 3, no la cambie.
+
+~~~python
+# urls.py
+
+# entrada str
+path('tarea2/ejercicio4/<entrada>', views.tarea2_ejercicio4),
+~~~
+
+~~~python
+# views.py
+
+def tarea2_ejercicio4(request, entrada):
+
+    '''
+    Given a string, if its length is at least 3,
+    add 'ing' to its end.
+    Unless it already ends in 'ing', in which case
+    add 'ly' instead.
+    If the string length is less than 3, leave it unchanged.
+    '''
+
+    # http://localhost:8000/ejercicios/tarea2/ejercicio4/spring
+    # springly
+
+    # http://localhost:8000/ejercicios/tarea2/ejercicio4/sprin
+    # sprining
+
+    # Dada una cadena, si su longitud es de al menos 3
+    if (len(entrada) >= 3):
+        # Si no termina en "ing" añadir "ing" al final
+        if (entrada[-3:] != "ing" ):
+            entrada = entrada + "ing"
+        # Si termina en "ing", añadir "ly" al final
+        elif (entrada[-3:] == "ing" ):
+            entrada = entrada + "ly"
+
+    # Si la longitud de la cadena es inferior a 3, no cambie la palabra
+    else:
+        entrada = entrada
+
+    salida = '%s' % (entrada)
+
+    return (HttpResponse(salida)) # Devolvemos la variable para HTTP
+~~~
+
+Si la palabra no termina en _ing_ añadir __ing__ al final:
+
+  - http://localhost:8000/ejercicios/tarea2/ejercicio4/sprin
+
+  ![](imagenes/4_1.png)
+
+Si la palabra termina en _ing_, añadir __ly__ al final:
+
+- http://localhost:8000/ejercicios/tarea2/ejercicio4/spring
+
+  ![](imagenes/4_1.png)
 
 ### Ejercicio 5 <a name="ej5"></a>
