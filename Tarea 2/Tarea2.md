@@ -267,4 +267,20 @@ Si la palabra termina en _ing_, añadir __ly__ al final:
 
   ![](imagenes/4_1.png)
 
+
 ### Ejercicio 5 <a name="ej5"></a>
+
+Lea cualquier archivo de texto especificado en la línea de comandos. Haga un simple split() en un espacio en blanco para obtener todas las palabras del archivo. En lugar de leer el archivo línea por línea, es más fácil leerlo en una cadena gigante y dividirlo una vez.
+
+Cree un dictado "mímico" que asigna cada palabra que aparece en el archivo a una lista de todas las palabras que siguen inmediatamente a esa palabra en el archivo. La lista de palabras puede estar en cualquier orden y debe incluir duplicados. Así, por ejemplo, la clave "y" podría tener la lista ["entonces", "mejor", "entonces", "después", ....] que enumera todas las palabras que vinieron después de "y" en el texto. Diremos que la cadena vacía es lo que precede a la primera palabra del archivo.
+
+Con el dictado mímico, es bastante fácil emitir texto aleatorio que imita al original. Escriba una palabra, luego busque las palabras que podrían aparecer a continuación y elija una al azar como el siguiente trabajo. Usa la cadena vacía como primera palabra para preparar las cosas. Si alguna vez nos quedamos atascados con una palabra que no está en el dictado, volvamos a la cadena vacía para mantener las cosas en movimiento.
+
+Nota: el módulo estándar de python 'random' incluye un método random.choice(list) que selecciona un elemento aleatorio de una lista no vacía.
+
+Para divertirse, alimente su programa a sí mismo como entrada. Podríamos trabajar para ponerlo en saltos de línea alrededor de 70 columnas, para que la salida se vea mejor.
+
+~~~python
+# Ninguna entrada, leemos un fichero en la función
+path('tarea2/ejercicio5', views.tarea2_ejercicio5),
+~~~
