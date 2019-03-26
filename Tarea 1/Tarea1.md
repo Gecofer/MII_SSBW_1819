@@ -164,4 +164,4 @@ def hola_mundo(request):
 
 Y ejecutamos el programa con `docker-compose up`. Y accedemos a la siguiente dirección http://localhost:8000/ejercicios/hola/andrea, a través del navegador.
 
-![](imagenes/1.png)
+![](imagenes/tarea1.png)
