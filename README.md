@@ -10,7 +10,9 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 
 
 - [Tarea 1: Ejercicios de Python](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%201)
-  - Muestra "hola" y el nombre que le pongamos a la entrada de la url: http://localhost:8000/ejercicios/hola/andrea
+  - http://localhost:8000/ejercicios/hola/andrea
+    ![](Tarea 1/imagenes/1.png)
+
 
 
 - Tarea 2:
