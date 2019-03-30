@@ -259,7 +259,7 @@ Si la palabra no termina en _ing_ añadir __ing__ al final:
 
   - http://localhost:8000/ejercicios/tarea2/ejercicio4/sprin
 
-  ![](imagenes/4_1.png)
+    ![](imagenes/4_1.png)
 
 Si la palabra termina en _ing_, añadir __ly__ al final:
 
@@ -416,3 +416,7 @@ def tarea2_ejercicio5(request):
 
     return HttpResponse(salida)
 ~~~
+
+En la salida del ejercicio 5 (http://localhost:8000/ejercicios/tarea2/ejercicio5), podemos ver el texto original, el diccionario mímico creado y el texto resultante dado el diccionario mímico y la palabra inicial, en la que se imprimen 200 palabras al azar.
+
+![](imagenes/5_0.png)
