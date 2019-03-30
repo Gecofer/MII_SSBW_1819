@@ -276,7 +276,7 @@ Cree un dictado "mímico" que asigna cada palabra que aparece en el archivo a un
 
 Con el dictado mímico, es bastante fácil emitir texto aleatorio que imita al original. Escriba una palabra, luego busque las palabras que podrían aparecer a continuación y elija una al azar como el siguiente trabajo. Usa la cadena vacía como primera palabra para preparar las cosas. Si alguna vez nos quedamos atascados con una palabra que no está en el dictado, volvamos a la cadena vacía para mantener las cosas en movimiento.
 
-Nota: el módulo estándar de python 'random' incluye un método random.choice(list) que selecciona un elemento aleatorio de una lista no vacía.
+_Nota: el módulo estándar de python 'random' incluye un método random.choice(list) que selecciona un elemento aleatorio de una lista no vacía._
 
 Para divertirse, alimente su programa a sí mismo como entrada. Podríamos trabajar para ponerlo en saltos de línea alrededor de 70 columnas, para que la salida se vea mejor.
 
