@@ -281,6 +281,138 @@ Nota: el módulo estándar de python 'random' incluye un método random.choice(l
 Para divertirse, alimente su programa a sí mismo como entrada. Podríamos trabajar para ponerlo en saltos de línea alrededor de 70 columnas, para que la salida se vea mejor.
 
 ~~~python
+# urls.py
+
 # Ninguna entrada, leemos un fichero en la función
 path('tarea2/ejercicio5', views.tarea2_ejercicio5),
+~~~
+
+~~~python
+# views.py
+
+
+def diccionario_mimico(filename):
+
+    # Devolvemos el diccionario "mímico" mapeando cada palabra a la lista
+    # de palabras que la siguen. Construimos un diccionario "mímico" que mapea
+    # cada palabra que aparece en el archivo a una lista de todas las palabras
+    # que siguen inmediatamente a esa palabra en el archivo.
+    diccionario_mimico = {}
+    prev = ''
+
+    # Leemos un fichero
+    with open("file.txt") as f:
+        mensaje = f.read()
+
+    # Eliminamos las mayúsculas y los signos de puntuación
+    mensaje = mensaje.lower();
+    mensaje = re.sub(r'[^\w\s]','', mensaje)
+
+    # Hacer un "split()" en un espacio en blanco para obtener todas las
+    # palabras del archivo
+    mensaje = mensaje.split()
+
+    # Creamos el diccionario mimico
+    # Iteramos las palabras del texto de entrada
+    # palabra ['prev']
+    # Añadimos la siguiente palabra a la lista
+    for palabra in mensaje:
+        if not prev in diccionario_mimico:
+          diccionario_mimico[prev] = [palabra]
+        else:
+          diccionario_mimico[prev].append(palabra)
+
+        prev = palabra
+
+    # Devolvemos el diccionario mimico creado
+    return diccionario_mimico
+
+
+def visualizar_diccionario_mimico(diccionario_mimico, palabra):
+
+  lista_diccionario = []
+
+  # Dado el diccionario mimico mímico y la palabra inicial,
+  # vamos a visualizar 200 palabras al azar
+  for i in range(200):
+    lista_diccionario.append(palabra + "")
+    # Usaremos la cadena vacía como primera palabra
+    palabra_siguiente = diccionario_mimico.get(palabra)
+
+    # Poner None si no se encuentra
+    if not palabra_siguiente:
+        palabra_siguiente = diccionario_mimico['']
+
+    # El módulo estándar de python 'random' incluye un
+    # random.choice(list) método que selecciona un elemento aleatorio
+    # de una lista no vacía
+    palabra = random.choice(palabra_siguiente)
+
+  # http://elclubdelautodidacta.es/wp/2013/10/python-troceando-y-recomponiendo-strings/
+  # Vamos hacer el proceso inverso de la función "split()", es decir, dada una
+  # lista de strings, fusionarla en una única cadena empleando determinado
+  # carácter como separador
+  texto = (' '.join(lista_diccionario))
+
+  return texto;
+
+
+def tarea2_ejercicio5(request):
+
+    '''
+    Read any text file specified on the command line.
+    Do a simple split() on whitespace to obtain all the words in the file.
+    Rather than read the file line by line, it's easier to read
+    it into one giant string and split it once.
+
+    Build a "mimic" dict that maps each word that appears in the file
+    to a list of all the words that immediately follow that word in the file.
+    The list of words can be be in any order and should include
+    duplicates. So for example the key "and" might have the list
+    ["then", "best", "then", "after", ...] listing
+    all the words which came after "and" in the text.
+    We'll say that the empty string is what comes before
+    the first word in the file.
+
+    With the mimic dict, it's fairly easy to emit random
+    text that mimics the original. Print a word, then look
+    up what words might come next and pick one at random as
+    the next work.
+
+    Use the empty string as the first word to prime things.
+    If we ever get stuck with a word that is not in the dict,
+    go back to the empty string to keep things moving.
+    Note: the standard python module 'random' includes a
+    random.choice(list) method which picks a random element
+    from a non-empty list.
+
+    For fun, feed your program to itself as input.
+    Could work on getting it to put in linebreaks around 70
+    columns, so the output looks better.
+    '''
+
+    # http://localhost:8000/ejercicios/tarea2/ejercicio5
+
+    # Mostramos el contenido del fichero
+    f = open ('file.txt','r')
+    fichero = f.read()
+    f.close()
+
+    # Devolvemos el diccionario creado
+    diccionario = diccionario_mimico("file.txt")
+
+    # Creamos el nuevo texto
+    # Dado el diccionario mimico y la palabra inicial,
+    # imprime 200 palabras al azar.
+    texto = visualizar_diccionario_mimico(diccionario, '')
+
+    # Visualizamos todo a la salida
+    salida = '''
+                <html> <h2>Texto original </h2> %s
+                       <h2>Diccionario mimico </h2> %s
+                       <h2>Texto resultante </h2> %s
+                </html>
+             ''' % (fichero, diccionario, texto)
+
+    return HttpResponse(salida)
 ~~~
