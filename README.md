@@ -22,3 +22,13 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 
 
 - [Tarea 3: Expresiones Regulares](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%203)
+
+- [Tarea 4: Base de Datos MongoDB](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%204)
+
+- [Tarea 5: CSS Frameworks y formularios](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%205)
+
+- [Tarea 6: CSS](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%206)
+
+- [Tarea 7: CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%207)
+
+- [Tarea 8: Autentificación, Autorización, y Registro de eventos](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%208)
