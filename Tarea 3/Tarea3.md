@@ -1,6 +1,68 @@
 ## Tarea 3: Expresiones Regulares
 
-#### Ejercicio 1
+#### Ejercicio: Extraer los titulares y/o imágenes
+
+Realizar un programa en el que se acceda a un periódico, en este caso a [El País](https://elpais.com), y se extraiga haciendo uso de expresiones regulares los titulares y las imágenes del mismo, en este caso se ha escogido la información de la portada (http://ep00.epimg.net/rss/elpais/portada.xml):
+
+~~~python
+# urls.py
+
+# ninguna entrada
+path('tarea3/titulares', views.extraer_titulares_imagenes),
+~~~
+
+~~~python
+# views.py
+def extraer_titulares_imagenes(request):
+
+    '''
+    Función que nos permite extraer los titulares e imágenes de un periódio,
+    a partir del contenido XML
+    '''
+
+    contenido = ""
+    titulos = []
+    imagenes = []
+    context = {}
+
+    # La URL de la que vamos a extraer el contenido
+    url = 'http://ep00.epimg.net/rss/elpais/portada.xml'
+
+    # Comprobamos que la URL escogida devuele estatus 200
+    web = requests.get(url)
+    if(web.status_code == 200): contenido = web.text
+
+    # La estructura de los títulos en la URL de XML
+    extraer_titulares = re.findall(r'<title><\!\[CDATA\[(.+?)\]\]><\/title>',
+                              contenido)
+
+    # La estructura de los títulos en la URL de XML
+    extraer_imagenes = re.findall(r'<enclosure url="(.+?)"', contenido)
+
+    # Recorremos todos los de la página
+    for titular in extraer_titulares:
+        titulos.append({'titular': titular})
+
+    for imagen in extraer_imagenes:
+
+        imagenes.append({'imagen': imagen})
+
+    # Los guardamos, para mostrarlos en la página HTML
+    context = {
+        'titulos': titulos,
+        'imagenes': imagenes
+    }
+
+    return render(request, 'periodico.html', context)
+
+
+~~~
+
+
+El resultado de http://localhost:8000/ejercicios/tarea3/titulares es:
+
+![](imagenes/1.png)
+
 
 <!----
 

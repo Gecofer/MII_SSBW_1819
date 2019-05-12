@@ -22,6 +22,7 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 
 
 - [Tarea 3: Expresiones Regulares](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%203)
+  - Ejercicio (http://localhost:8000/ejercicios/tarea3/titulares): extraer mediante el uso de expresiones regulares, los titulares y las imágenes de un periódico.
 
 - [Tarea 4: Base de Datos MongoDB](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%204)
 
