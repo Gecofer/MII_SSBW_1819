@@ -6,10 +6,10 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 
 **Tareas realizadas en la asignatura:**
 
-- [Tarea 0: Entorno de desarrollo con docker-compose](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%200)
+- [Tarea 0: Entorno de desarrollo con docker-compose](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%200): crear el entorno de desarollo con `docker-compose` con el que vamos a usar durante toda la asignatura.
 
 
-- [Tarea 1: Ejercicios de Python](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%201)
+- [Tarea 1: Ejercicios de Python](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%201): ejercicio que muestra "hola" y el nombre asignado por nosotros en la URL.
   - Ejercicio: http://localhost:8000/ejercicios/hola/andrea
 
 
