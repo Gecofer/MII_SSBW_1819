@@ -13,6 +13,7 @@ path('tarea3/titulares', views.extraer_titulares_imagenes),
 
 ~~~python
 # views.py
+
 def extraer_titulares_imagenes(request):
 
     '''
