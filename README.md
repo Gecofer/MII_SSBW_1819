@@ -34,7 +34,8 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
     - Ejercicio (http://localhost:8000/pelis/tarea4/mongoengine1/Harrison%20Ford): mostrar las primeras películas de la base de datos a partir del actor de la película, para ello se debe de introducir en la URL el actor que se desea consultar.
 
 
-- [Tarea 5: CSS Frameworks y formularios](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%205)
+- [Tarea 5: CSS Frameworks y formularios](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%205): se crea un formulario con `mongoengine`, en donde se introduce el actor a buscar, y dándole a "Buscar" (http://localhost:8000/pelis/formulario), dicha página nos redirige a (http://localhost:8000/pelis/pelis_que_sale/Harrison%20Ford).
+
 
 - [Tarea 6: CSS](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%206)
 
