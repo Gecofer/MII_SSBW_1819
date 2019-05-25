@@ -4,7 +4,7 @@
 
 En esta tarea incorporaremos alguno de los [frameworks CSS 'responsive'](https://www.skysilk.com/blog/2018/6-best-css-frameworks-2019/) a la tarea anterior.
 
-Haremos una consulta del estilo http://localhost:8000/ejercicios/pelis que sale/Clark Gable"
+Haremos una consulta del estilo http://localhost:8000/ejercicios/pelis%20que%20sale/Clark%20Gable
 
 Luego haremos una nueva app en nuestro proyecto:
 
