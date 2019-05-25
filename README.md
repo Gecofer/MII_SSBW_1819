@@ -24,7 +24,13 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 3: Expresiones Regulares](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%203)
   - Ejercicio (http://localhost:8000/ejercicios/tarea3/titulares): extraer mediante el uso de expresiones regulares, los titulares y las imágenes de un periódico.
 
+
 - [Tarea 4: Base de Datos MongoDB](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%204)
+  - Consultas realizadas con `pymongo`:
+    - Ejercicio 1 (http://localhost:8000/ejercicios/tarea4/pymongo1): mostrar las diez primeras películas de la base de datos.
+    - Ejercicio 2 (http://localhost:8000/ejercicios/tarea4/pymongo2/2016): mostrar las primeras películas de la base de datos a partir de la fecha introducida, para ello se debe de introducir en la URL el año que se desea consultar.
+    - Ejercicio 3 (http://localhost:8000/ejercicios/tarea4/pymongo3/Harrison%20Ford): mostrar las primeras películas de la base de datos a partir del actor de la película, para ello se debe de introducir en la URL el actor que se desea consultar.
+
 
 - [Tarea 5: CSS Frameworks y formularios](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%205)
 
