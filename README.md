@@ -37,7 +37,8 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 5: CSS Frameworks y formularios](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%205): se crea un formulario con `mongoengine`, en donde se introduce el actor a buscar, y dándole a "Buscar" (http://localhost:8000/pelis/formulario), dicha página nos redirige a (http://localhost:8000/pelis/pelis_que_sale/Harrison%20Ford).
 
 
-- [Tarea 6: CSS](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%206)
+- [Tarea 6: CSS](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%206): se crea un formulario para introducir el ID de la película (http://localhost:8000/pelis/formulario_id) y dándole a "Buscar" e introduciendo el ID correspondiente _5b107bec1d2952d0da9046e1_, dicha página nos redirige a otra hecha con CSS que contiene información acerca de la película (http://localhost:8000/pelis/informacion_pelicula/5b107bec1d2952d0da9046e1).
+
 
 - [Tarea 7: CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%207)
 
