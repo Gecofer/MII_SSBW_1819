@@ -40,6 +40,8 @@ version: '3'
 
 5. Accedemos a http://localhost:8081
 
+![](imagenes/5.png)
+
 Con esto ya tenemos nuestra base de datos disponible, para comprobar que los contenedores están creados correctamente, hacemos `docker ps` y comprobamos que tenemos que los 3 contenedores del `docker-compose.yml`. Y para acceder al contenedor `docker-compose exec mongo /bin/bash`.
 
 
