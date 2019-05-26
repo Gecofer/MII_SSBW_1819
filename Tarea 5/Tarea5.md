@@ -3,7 +3,7 @@
 A partir de lo visto en la [Tarea 4](https://github.com/Gecofer/MII_SSBW_1819/blob/master/Tarea%204/Tarea4.md) vamos añadir a las consultas realizadas con `mongonengine` una consulta del tipo http://localhost:8000/ejercicios/pelis%20que%20sale/Clark%20Gable, haciendo uso de un formulario.
 
 ~~~python
-# urls.py
+# pelis/urls.py
 
 # entrada del actor de la película
 path('pelis_que_sale/<entrada>', views.pelis_que_sale, name="pelis_que_sale"),
@@ -16,6 +16,8 @@ path('peliculas_actor', views.peliculas_actor),
 ~~~
 
 ~~~python
+# pelis/views.py
+
 def pelis_que_sale(request, entrada):
 
 	'''
