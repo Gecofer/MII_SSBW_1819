@@ -72,7 +72,6 @@ y en el archivo **models.py**:
 
 ~~~python
 # models.py
------------
 
 from mongoengine import *
 
