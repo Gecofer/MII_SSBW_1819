@@ -1,6 +1,6 @@
 ## Tarea 11: AJAX, ES6 fetch
 
-> **Pincha [aquí](https://github.com/Gecofer/MII_SSBW_1819/blob/master/Tarea%2010/Tarea11.md) para ver cómo se hizo la Tarea 11**
+> **Pincha [aquí](https://github.com/Gecofer/MII_SSBW_1819/blob/master/Tarea%2011/Tarea11.md) para ver cómo se hizo la Tarea 11**
 
 
 En esta tarea vamos a añadir un nuevo campo númerico a cada peli, que aumente o disminulla 'me gusta' o 'no me gusta'.
