@@ -19,6 +19,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware', # new
     'django.middleware.common.CommonMiddleware', # new
     ...
+    
 ]
 
 y hay que añadir
