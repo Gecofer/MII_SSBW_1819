@@ -1,41 +1,35 @@
 ## Tarea 13: Single Page Application con React
 
-instalamos en el requirements: django-cors-headers
+Para realizar esta tarea el profesor está siguiente el siguiente enlace: https://wsvincent.com/django-rest-framework-react-tutorial/, pero dice que está antiguado.
 
-y hacemod docker-compose build
+Lo primero que tenemos que hacer es instalar en el **requirements.txt**: `django-cors-headers`, por lo que necesitamos volver hacer `docker-compose build`. A continuación, nos vamos a **settings.py** y añadimos:
 
-luego nos vamos a settings y añadimos
-
+~~~
 INSTALLED_APPS = [
-    'corsheaders'
+  'corsheaders'
 ]
 
-Está siguiendo este enlace: https://wsvincent.com/django-rest-framework-react-tutorial/, aunque está antiguado,
-Lo único que nos hemos hecho han sido los tests
+....
 
-Hay que ponerlo en el MIDDLEWARE
-
+# añadimos al MIDDLEWARE
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware', # new
-    'django.middleware.common.CommonMiddleware', # new
+  'corsheaders.middleware.CorsMiddleware', # new
+  'django.middleware.common.CommonMiddleware', # new
     ...
-    
 ]
 
-y hay que añadir
+...
 
 CORS_ORIGIN_WHITELIST = [
-		'http://localhost:3000'
+  'http://localhost:3000'
 ]
+~~~
 
+### Instalando REACT
 
-Lo que v hacer que no sea llamado, desde el propio de la aplicación
+Ahora, debemos instalar todo el **ecosistema de react**. Por lo que instalamos todo el ecosistema con `create-react-app`, que además incluye un servidor de desarrollo. Entonces, nos vamos a la carpeta de **código** (`cd codigo/`) y hacemos:
 
-Hay que instalar todo el ecosistema de react
-Instalamos todo el ecosistema de react con create-react-app, que además incluye un servidor de desarrollo.
-
-Enla carpeta de codigo, que es la que me interesa
-
+~~~
 > sudo npm install -g create-react-app
 > create-react-app frontend
 > cd frontend
@@ -43,105 +37,17 @@ Enla carpeta de codigo, que es la que me interesa
 > npm install bootstrap
 > npm install reactstrap
 > npm start
+~~~
 
-----
+Una vez que hacemos `npm start`, se nos abre http://localhost:3000/:
 
-cvi087249:MII_SSBW_1819 gema$ sudo npm install -g create-react-app
-Password:
-/usr/local/bin/create-react-app -> /usr/local/lib/node_modules/create-react-app/index.js
-+ create-react-app@3.0.1
-added 91 packages from 45 contributors in 6.513s
-cvi087249:MII_SSBW_1819 gema$ cd codigo/
-cvi087249:codigo gema$ sudo npm install -g create-react-app
-/usr/local/bin/create-react-app -> /usr/local/lib/node_modules/create-react-app/index.js
-+ create-react-app@3.0.1
-updated 1 package in 1.312s
+![](imagenes/1.png)
 
+![](imagenes/2.png)
 
-   ╭───────────────────────────────────────────────────────────────╮
-   │                                                               │
-   │       New minor version of npm available! 6.5.0 → 6.9.0       │
-   │   Changelog: https://github.com/npm/cli/releases/tag/v6.9.0   │
-   │               Run npm install -g npm to update!               │
-   │                                                               │
-   ╰───────────────────────────────────────────────────────────────╯
+En la carpeta **frontend > src > App.js** pegamos:
 
-cvi087249:codigo gema$ npm install -g npm
-/usr/local/bin/npm -> /usr/local/lib/node_modules/npm/bin/npm-cli.js
-/usr/local/bin/npx -> /usr/local/lib/node_modules/npm/bin/npx-cli.js
-+ npm@6.9.0
-added 52 packages from 9 contributors, removed 15 packages and updated 37 packages in 9.156s
-cvi087249:codigo gema$ create-react-app frontend
-
-Creating a new React app in /Users/gema/Documents/Github/MII_SSBW_1819/codigo/frontend.
-
-Installing packages. This might take a couple of minutes.
-Installing react, react-dom, and react-scripts...
-
-
-> fsevents@1.2.9 install /Users/gema/Documents/Github/MII_SSBW_1819/codigo/frontend/node_modules/chokidar/node_modules/fsevents
-> node install
-
-[fsevents] Success: "/Users/gema/Documents/Github/MII_SSBW_1819/codigo/frontend/node_modules/chokidar/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64/fse.node" is installed via remote
-
-> fsevents@1.2.9 install /Users/gema/Documents/Github/MII_SSBW_1819/codigo/frontend/node_modules/jest-haste-map/node_modules/fsevents
-> node install
-
-[fsevents] Success: "/Users/gema/Documents/Github/MII_SSBW_1819/codigo/frontend/node_modules/jest-haste-map/node_modules/fsevents/lib/binding/Release/node-v67-darwin-x64/fse.node" is installed via remote
-
-> core-js@2.6.9 postinstall /Users/gema/Documents/Github/MII_SSBW_1819/codigo/frontend/node_modules/babel-runtime/node_modules/core-js
-> node scripts/postinstall || echo "ignore"
-
-
-> core-js-pure@3.1.3 postinstall /Users/gema/Documents/Github/MII_SSBW_1819/codigo/frontend/node_modules/core-js-pure
-> node scripts/postinstall || echo "ignore"
-
-+ react@16.8.6
-+ react-scripts@3.0.1
-+ react-dom@16.8.6
-added 1541 packages from 747 contributors and audited 888971 packages in 75.118s
-found 0 vulnerabilities
-
-
-Success! Created frontend at /Users/gema/Documents/Github/MII_SSBW_1819/codigo/frontend
-Inside that directory, you can run several commands:
-
-  npm start
-    Starts the development server.
-
-  npm run build
-    Bundles the app into static files for production.
-
-  npm test
-    Starts the test runner.
-
-  npm run eject
-    Removes this tool and copies build dependencies, configuration files
-    and scripts into the app directory. If you do this, you can’t go back!
-
-We suggest that you begin by typing:
-
-  cd frontend
-  npm start
-
-Happy hacking!
-
------------------------------
-
-
-> cd frontend
-> npm install react-router-dom
-> npm install bootstrap
-> npm install reactstrap
-> npm start
-
-
-hacemos npm start y no abre en http://localhost:3000/
-
-
-
-Y enla carpeta frontend > src > App.js
-
+~~~
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -168,26 +74,25 @@ function App() {
 }
 
 export default App;
+~~~
 
----
+Se puede cambiar el texto de **Learn React** por cualquier otra cosa como _Learn React y lo modifico_:
 
-Y si cambio: Learn React y lo modifico se cambia
+![](imagenes/3.png)
 
-Nos salimos ctrol+c
+Salimos de la aplicación con CTRL + C y nos instalamos:
 
-Ahora nos tenemos que instalar
-
+~~~
 > npm install react-router-dom
 > npm install bootstrap
 > npm install reactstrap
+~~~
 
-Hemos instalado todo esto
+Acabamos de instalar todo esto, es decir, hemos instalado **bootstrap para react**, tal como viene en _reacstrap_. Incluimos también **react-router**, tal como en **react trainig / reac router**. Ampliamos entonces el archivo `index.js` para incluir el router y bootstrap.
 
-e instalamos bootstrap para react, tal como viene en reacstrap. Incluimos también react-router, tal como en react trainig / reac router. Ampliamos entonces el archivo index.js para incluir el router y bootstrap
+El fichero **frontend > src > index.js** es el primero que se ejecuta, viene con el siguiente contenido:
 
-
-frontend > src > index.js --> este fichero es el primero que ejecuta
-
+~~~
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -200,15 +105,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+~~~
 
-
-y añadimos
-
-import { BrowserRouter } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-y quedaría:
+Añadimos a dicho fichero:
 
 ~~~~
 import React from 'react';
@@ -217,6 +116,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+# AÑADIMOS LAS SIGUIENTES LÍNEAS
 import { BrowserRouter } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -235,15 +135,9 @@ ReactDOM.render(
 serviceWorker.unregister();
 ~~~~
 
-esto 	<BrowserRouter> lo que hace es llamar a la Appp.js
+Con **BrowserRouter**, lo que se hace es llamar a **App.js**. Luego copiamos y pegamos de aquí https://reactstrap.github.io/components/navbar/. También, se ha puesto también el navbar de Bootstrap:
 
-y luego copio y pego de aquí: https://reactstrap.github.io/components/navbar/
-
-Las variables globales que vamos a usar es
-
-
-He puesto el navbar del bootstrap
-
+~~~
 export default class App extends React.Component {
 
   // aquí va la clase del navbar: https://reactstrap.github.io/components/navbar/
@@ -312,31 +206,78 @@ export default class App extends React.Component {
   }
 
 }
+~~~
 
-y vamos a la API, y nos extraemos los
+Vamos a la URL de la API creada en la Tarea 12 (http://localhost:8000/pelis/api_pelis), y extraemos las películas. A partir de ahí, nos creamos una carpeta nueva en **frontend > src > components** y vamos hacer el _componente de "todas"_. El componente `Todas`, hará una llamada GET a la API, para traerse una lista de las diez primeras películas justo después de montarse. Creamos una nueva clase Component de react en el archivo:
 
+~~~
+# Todas.js
 
-Ahora va hacer ese componente de "todas"
+// components/App.js
+import React, { Component } from 'react'
+import Peli from './Peli'
 
-Nos creamos dentro de "src" una carpeta de components
+export default class Todas extends Component {
 
-me creo un fichero Todas.js que tengo que llamar en App.js con (import Todas from './components/Todas')
+  constructor(props) {
+    super(props)
+    this.state = {                // variable estado de la clase, lista de películas
+      pelis: [{title: 'el bueno el feo y el malo'}]
+     }
+  }
 
+  // llamada al API
+  componentDidMount() {
+    fetch('http://localhost:8000/pelis/api_pelis')  // o el que sea (el fetch es un get)
+      .then(res => { return res.json()})
+      .then(data => {
+        console.log(data)
+        this.setState({pelis:data})
+      }).catch(error => {
+        console.log(error)
+      })
 
---------
+    }
 
-Hay que hacer una tarea 14 de depliegue
+  render() {
 
-en el docker-compose se cambiaria lo de
-python manage.py runserver 0.0.0.0:8000
+    return (
+      <div>
+      Todas las pelis: <br />
+        {this.state.pelis.map(peli => {  // arrow function
+          return (
+            <Peli peli={peli}/>
+          )
+        })
+      }
+      </div>
+    )
+  }
+}
+~~~
 
-en lugar de poner runserver, hay que bajarse otro servidor, gunicorn seguramente, ponerlo en el requirements, y eso engancha a composeexample > wsgi.py
+Luego nos creamos el fichero **frontend > src > components > Peli.js**, es decir, vamos a llamar a otro componente, Peli, para mostrar los detalles de cada película:
 
-además en el settings se añadiria
+~~~
+// components/Peli.js
+import React, { Component } from 'react'
 
-DEBUG=False
+export default class Peli extends Component {
 
-https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/gunicorn/
+	render() {
 
+	var peli = this.props.peli   // props desde el componente de arriba
+	return(
+	   <div key={peli.id}>
+	      <h3>{peli.title}</h3>
 
-cuando haya un error que la aplicación la arranque y funcione, que haya un proceso superusado, lo normal es ponerlo en el systemctl de unix
+	      <hr />
+	   </div>
+	  )
+	}
+}
+~~~
+
+Y en http://localhost:3000/ visualizamos:
+
+![](imagenes/4.png)
