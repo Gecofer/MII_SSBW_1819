@@ -38,8 +38,6 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 
 ![](imagenes/1.png)
 
-
-
 - [Tarea 5: CSS Frameworks y formularios](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%205): se crea un formulario con `mongoengine`, en donde se introduce el actor a buscar, y dándole a "Buscar" (http://localhost:8000/pelis/formulario), dicha página nos redirige a (http://localhost:8000/pelis/pelis_que_sale/Harrison%20Ford).
 
 
@@ -63,7 +61,7 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 12: API REST](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2012)
 
 
-- [Tarea 13: Single Page Application con React](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2013)
+- [Tarea 13: Single Page Application con React](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2013): se crea un _front-end_ con React para la API de la Tarea 12 (http://localhost:8000/pelis/api_pelis), para acceder a dicho contenido debemos hacer `npm start` en la carpeta de **frontend** lo que nos abrirá la siguiente página http://localhost:3000/.
 
 
 - [Tarea 14: Producción](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2014)
