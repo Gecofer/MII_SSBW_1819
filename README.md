@@ -44,7 +44,7 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 6: CSS](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%206): se crea un formulario para introducir el ID de la película (http://localhost:8000/pelis/formulario_id) y dándole a "Buscar" e introduciendo el ID correspondiente _5b107bec1d2952d0da9046e1_, dicha página nos redirige a http://localhost:8000/pelis/informacion_pelicula/5b107bec1d2952d0da9046e1, página hecha con CSS que contiene información acerca de la película.
 
 
-- [Tarea 7: CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%207)
+- [Tarea 7: CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%207): se añade la funcionalidad de crear, eliminar y modificar películas de la base de datos, para ello es necesario acceder a http://localhost:8000/pelis/crud, en donde se nos permite realizar cada unas de las funciones que acabamos de comentar.
 
 
 - [Tarea 8: Autentificación, Autorización, y Registro de eventos](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%208)
