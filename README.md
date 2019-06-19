@@ -59,8 +59,8 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 11: AJAX, ES6 fetch](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2011)
 
 - [Tarea 12: API REST](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2012): se ha añadido un API REST a la aplicación y las funciones necesarias para responder a las peticiones GET, PUT, POST y DELETE, para ello se han creado dos funciones. En donde `api_pelis(request)` es una función para la API que lista todas las películas con GET y permite añadir con POST (http://localhost:8000/pelis/api_pelis) y `api_peli(request, id)`: función para la API que permite listar todas las películas con GET, modificarlas con PUT y/o borrarlas con DELETE (http://localhost:8000/pelis/api_peli/5b107bec1d2952d0da90471f). Pero como manejar así POST, PUT y DELETE es más complicado, se hace uso de DJANGO REST Framework, en donde se hace el mismo funcionamiento explicado, solo que haciendo uso de una interfaz gráfica:
-- http://localhost:8000/pelis/apipelis/: en esta API podemos hacer GET y POST.
-- http://localhost:8000/pelis/apipelis/5b107bec1d2952d0da90471f/: en esta API podemos hacer GET, DELETE y PUT.
+    - http://localhost:8000/pelis/apipelis/: en esta API podemos hacer GET y POST.
+    - http://localhost:8000/pelis/apipelis/5b107bec1d2952d0da90471f/: en esta API podemos hacer GET, DELETE y PUT.
 
 
 - [Tarea 13: Single Page Application con React](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2013): se crea un _front-end_ con React para la API de la Tarea 12 (http://localhost:8000/pelis/api_pelis), para acceder a dicho contenido debemos hacer `npm start` en la carpeta de **frontend** lo que nos abrirá la siguiente página http://localhost:3000/. Esta aplicación con React hace un GET de las películas a la API y las muestra.
