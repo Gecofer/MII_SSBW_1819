@@ -25,7 +25,7 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
   - Ejercicio (http://localhost:8000/ejercicios/tarea3/titulares): extraer mediante el uso de expresiones regulares, los titulares y las imágenes de un periódico.
 
 
-- [Tarea 4: Base de Datos MongoDB](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%204)
+- [Tarea 4: Base de Datos MongoDB](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%204): se ha añadido un servicio de base de datos con MongoDB y para consultarla se ha usado mongoengine a partir de la clase Pelis.
   - Consultas realizadas con `pymongo`:
     - Ejercicio 1 (http://localhost:8000/ejercicios/tarea4/pymongo1): mostrar las diez primeras películas de la base de datos.
     - Ejercicio 2 (http://localhost:8000/ejercicios/tarea4/pymongo2/2016): mostrar las primeras películas de la base de datos a partir de la fecha introducida, para ello se debe de introducir en la URL el año que se desea consultar.
@@ -41,7 +41,7 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 5: CSS Frameworks y formularios](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%205): se crea un formulario con `mongoengine`, en donde se introduce el actor a buscar, y dándole a "Buscar" (http://localhost:8000/pelis/formulario), dicha página nos redirige a (http://localhost:8000/pelis/pelis_que_sale/Harrison%20Ford).
 
 
-- [Tarea 6: CSS](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%206): se crea un formulario para introducir el ID de la película (http://localhost:8000/pelis/formulario_id) y dándole a "Buscar" e introduciendo el ID correspondiente _5b107bec1d2952d0da9046e1_, dicha página nos redirige a http://localhost:8000/pelis/informacion_pelicula/5b107bec1d2952d0da9046e1, página hecha con CSS que contiene información acerca de la película .
+- [Tarea 6: CSS](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%206): se crea un formulario para introducir el ID de la película (http://localhost:8000/pelis/formulario_id) y dándole a "Buscar" e introduciendo el ID correspondiente _5b107bec1d2952d0da9046e1_, dicha página nos redirige a http://localhost:8000/pelis/informacion_pelicula/5b107bec1d2952d0da9046e1, página hecha con CSS que contiene información acerca de la película.
 
 
 - [Tarea 7: CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%207)
@@ -58,10 +58,12 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 
 - [Tarea 11: AJAX, ES6 fetch](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2011)
 
-- [Tarea 12: API REST](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2012)
+- [Tarea 12: API REST](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2012): se ha añadido un API REST a la aplicación y las funciones necesarias para responder a las peticiones GET, PUT, POST y DELETE, para ello se han creado dos funciones. En donde `api_pelis(request)` es una función para la API que lista todas las películas con GET y permite añadir con POST (http://localhost:8000/pelis/api_pelis) y `api_peli(request, id)`: función para la API que permite listar todas las películas con GET, modificarlas con PUT y/o borrarlas con DELETE (http://localhost:8000/pelis/api_peli/5b107bec1d2952d0da90471f). Pero como manejar así POST, PUT y DELETE es más complicado, se hace uso de DJANGO REST Framework, en donde se hace el mismo funcionamiento explicado, solo que haciendo uso de una interfaz gráfica:
+- http://localhost:8000/pelis/apipelis/: en esta API podemos hacer GET y POST.
+- http://localhost:8000/pelis/apipelis/5b107bec1d2952d0da90471f/: en esta API podemos hacer GET, DELETE y PUT.
 
 
-- [Tarea 13: Single Page Application con React](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2013): se crea un _front-end_ con React para la API de la Tarea 12 (http://localhost:8000/pelis/api_pelis), para acceder a dicho contenido debemos hacer `npm start` en la carpeta de **frontend** lo que nos abrirá la siguiente página http://localhost:3000/.
+- [Tarea 13: Single Page Application con React](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2013): se crea un _front-end_ con React para la API de la Tarea 12 (http://localhost:8000/pelis/api_pelis), para acceder a dicho contenido debemos hacer `npm start` en la carpeta de **frontend** lo que nos abrirá la siguiente página http://localhost:3000/. Esta aplicación con React hace un GET de las películas a la API y las muestra.
 
 
 - [Tarea 14: Producción](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2014)
