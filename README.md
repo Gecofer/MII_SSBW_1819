@@ -53,7 +53,7 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 9: Autorización CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%209): la incorporación de autorización al CRUD se ha realizado junto con la [tarea 8](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%208).
 
 
-- [Tarea 10: JavaScript, jQuery](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2010)
+- [Tarea 10: JavaScript, jQuery](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2010): para la realización de esta tarea se ha añadido un botón para poner la pantalla en modo 'nocturno' cambiando los colores del CSS de las vistas hechas hasta ahora.
 
 
 - [Tarea 11: AJAX, ES6 fetch](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2011)
