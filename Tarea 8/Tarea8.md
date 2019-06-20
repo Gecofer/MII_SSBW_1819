@@ -252,6 +252,8 @@ def informacion_pelicula(request, id):
 
 ![](imagenes/10.png)
 
+![](imagenes/14.png)
+
 
 
 ### Registro de eventos
