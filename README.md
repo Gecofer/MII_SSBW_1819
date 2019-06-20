@@ -50,7 +50,7 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 8: Autentificación, Autorización, y Registro de eventos](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%208): se ha añadido _logging_ a la aplicación, para así registrar los logs de algunas funciones y saber el estado del sistema. Por otro lado, para conectar nuestra aplicación a un servidor web como **nginx**, ha sido necesario hacer uso de la gestión _https_, lo que determina que ahora podamos acceder tanto a http://localhost:8000/pelis/buscador como a https://localhost/pelis/buscador. Por último, se ha hecho una autentificación de usuarios, en donde según que determinadas acciones se realicen, será necesario autenticarse.
 
 
-- [Tarea 9: Autorización CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%209)
+- [Tarea 9: Autorización CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%209): la incorporación de autorización al CRUD se ha realizado junto con la [tarea 8](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%208).
 
 
 - [Tarea 10: JavaScript, jQuery](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2010)
