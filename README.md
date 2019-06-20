@@ -47,7 +47,7 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 7: CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%207): se añade la funcionalidad de crear, eliminar y modificar películas de la base de datos, para ello es necesario acceder a http://localhost:8000/pelis/crud, en donde se nos permite realizar cada unas de las funciones que acabamos de comentar.
 
 
-- [Tarea 8: Autentificación, Autorización, y Registro de eventos](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%208)
+- [Tarea 8: Autentificación, Autorización, y Registro de eventos](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%208): se ha añadido _logging_ a la aplicación, para así registrar los logs de algunas funciones y saber el estado del sistema. Por otro lado, para conectar nuestra aplicación a un servidor web como **nginx**, ha sido necesario hacer uso de la gestión _https_, lo que determina que ahora podamos acceder tanto a http://localhost:8000/pelis/buscador como a https://localhost/pelis/buscador. Por último, se ha hecho una autentificación de usuarios, en donde según que determinadas acciones se realicen, será necesario autenticarse.
 
 
 - [Tarea 9: Autorización CRUD](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%209)
