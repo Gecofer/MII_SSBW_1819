@@ -1,9 +1,0 @@
-En el fichero views.py:
-
-from pymongo import *
-client = MongoClient('mongo', 27017)
-db = client.movies
-pelis = db.pelis
-
-- La BD se llama movies
-- Esa lista es un iterador
