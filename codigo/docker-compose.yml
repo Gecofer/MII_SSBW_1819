@@ -1,0 +1,47 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:4.0
+    restart: always
+    volumes:
+      - ./datos_db:/data/db
+      - .:/datos
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=admin
+      - ME_CONFIG_BASICAUTH_USERNAME=pass
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=pass
+    depends_on:
+      - mongo
+
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf:/etc/nginx/conf.d:ro
+      - ./cert:/etc/ssl/private:ro
+    depends_on:
+      - web
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    #command: python manage.py makemigrations && python manage.py migrate && gunicorn composeexample.wsgi -b 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    links:
+      - mongo
+    depends_on:
+      - mongo

@@ -1,0 +1,13 @@
+Read any text file specified on the command line.
+Do a simple split on whitespace to obtain all the words in the file.
+Rather than read the file line by line, it's easier to read
+it into one giant string and split it once.
+
+With the mimic dict, it's fairly easy to emit random
+text that mimics the original. Print a word, then look
+up what words might come next and pick one at random as
+the next work.
+
+For fun, feed your program to itself as input.
+Could work on getting it to put in linebreaks around 70
+columns, so the output looks better

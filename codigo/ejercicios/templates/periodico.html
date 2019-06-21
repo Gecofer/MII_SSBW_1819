@@ -1,0 +1,24 @@
+<!--Aquí es donde ponemos todo el html y el código por separado-->
+<html>
+<head>
+  <title>Tarea 3</title>
+</head>
+<body>
+
+  <p align="center">
+    <font face="Verdana", size=5, color=Blue>Titulares de El Pais</font>
+  </p>
+
+  {% for t in titulos %}
+    <li type="disc">{{ t.titular }}</li>
+  {% endfor %}
+
+  <p align="center">
+    <font face="Verdana", size=5, color=Blue>Imágenes de El Pais</font>
+  </p>
+
+  {% for i in imagenes %}
+    <img src={{ i.imagen }}>
+  {% endfor %}
+
+</body>

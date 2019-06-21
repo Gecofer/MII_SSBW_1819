@@ -1,0 +1,59 @@
+{% extends "mainInformacionPelis.html" %}
+{% block contenido %}
+
+
+<h1 id="titulo"> {{ pelicula.title }} -  {{ pelicula.year }} </h1>
+<span class="likebtn-wrapper" style="margin-left:1299px" data-identifier="item_1"></span>
+
+<div class="bordes">
+
+  <div class="informacion">
+
+    <p style="font-weight: bold"> Director: </p>
+    <p style="margin:14px">- {{ pelicula.director }}</p>
+
+    <p style="font-weight: bold"> Writers: </p>
+    {% for w in pelicula.writers %}
+      <p style="margin:14px">- {{ w }}</p>
+    {% endfor %}
+
+    <p style="font-weight: bold"> Actors: </p>
+    {% for a in pelicula.actors %}
+      <p style="margin:14px">- {{ a }}</p>
+    {% endfor %}
+
+    <p style="font-weight: bold"> Genres: </p>
+    {% for g in pelicula.genres %}
+      <p style="margin:14px">- {{ g }}</p>
+    {% endfor %}
+
+    <p style="font-weight: bold"> Runtime: </p>
+    <p style="margin:14px"> {{ pelicula.runtime }} minutes</p>
+
+  </div>
+
+  <div class="informacion">
+    <p style="font-weight: bold"> Summary: </p>
+    <p style="margin:14px"> {{ pelicula.plot }}</p>
+
+    <p style="font-weight: bold"> Awards: </p>
+    <p style="margin:14px"> {{ pelicula.awards.text }}</p>
+
+
+    <p style="font-weight: bold"> Rated: </p>
+    <p style="margin:14px"> {{ pelicula.rated }}</p>
+
+    <p style="font-weight: bold"> Votes: </p>
+    <p style="margin:14px">{{ pelicula.imdb.votes }}</p>
+
+    <p style="font-weight: bold"> Rating:
+      <p style="margin:14px">{{ pelicula.imdb.rating }} </p>
+    </p>
+
+    <p style="font-weight: bold"> Countries: </p>
+    {% for c in pelicula.countries %}
+      <p style="margin:18px">- {{ c }}</p>
+    {% endfor %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!-- Estilo CSS importado -->
+    <style>
+
+      #titulo{
+        color: black;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 25px
+      }
+
+      .fondo {
+        background-image: url("https://fotografias-viajestic.atresmedia.com/clipping/cmsimages01/2017/08/28/B32F93C9-CF5B-4016-B3CF-E9F2B57B13EB/58.jpg");
+      }
+
+      .bordes{
+        display: flex;
+        /* opacity: 0.5;
+        background-color: #F1DAFA; */
+        border: black 2px solid;
+        width: 75%;
+        margin-left: 200px
+      }
+
+      .informacion {
+        font-family: Verdana;
+        background-color: #F1DAFA;
+        opacity: 0.9;
+        font-size: 12px;
+        padding: 20px;
+        margin: 10px;
+        width: 50%;
+        display: inline-block;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #dddddd;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        padding: 8px;
+      }
+
+    </style>
+
+    <title> {{ pelicula.title }}</title>
+  </head>
+  <body class="fondo">
+
+    <ul>
+    <li><a href="/pelis/buscador">Inicio</a></li>
+    <li><a href="/pelis/formulario_id">Buscar por otro identificador</a></li>
+
+    </ul>
+
+  {% block contenido %}
+  {% endblock %}
+
+  </body>
+
+
+  <!-- Obtenido de: https://likebtn.com/en/ -->
+  <script>
+  (function(d,e,s){if(d.getElementById("likebtn_wjs"))return;
+  a=d.createElement(e);
+  m=d.getElementsByTagName(e)[0];
+  a.async=1;
+  a.id="likebtn_wjs";
+  a.src=s;
+  m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");
+  </script>
+</html>

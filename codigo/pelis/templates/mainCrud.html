@@ -1,0 +1,204 @@
+<!-- https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=crud-data-table-for-database-with-modal-form -->
+
+<!doctype html>
+<html lang="es">
+<head>
+
+  <meta charset="utf-8">
+  <title>Películas</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <style type="text/css">
+
+  body {
+  	background: white;
+  	font-family: 'Verdana';
+  	font-size: 13px;
+	}
+
+	.table-wrapper {
+    background: white;
+    padding: 20px 25px;
+    margin: 30px 0;
+		border-radius: 3px;
+    border: 1px solid #5D6D7E;
+  }
+	.table-title {
+		background: #5D6D7E;
+    color: white;
+		padding: 16px 30px;
+		margin: -20px -25px 10px;
+
+  }
+	.table-title .btn {
+		color: white;
+		float: right;
+		font-size: 13px;
+		min-width: 50px;
+		border-radius: 2px;
+		margin-left: 10px;
+	}
+	.table-title .btn i {
+		float: left;
+		font-size: 21px;
+		margin-right: 10px;
+	}
+
+  table.table tr th, table.table tr td {
+    border-color: white;
+		padding: 12px 15px;
+		vertical-align: middle;
+  }
+	table.table td a.edit {
+    color: #FFC107;
+  }
+  table.table td a.delete {
+    color: #F44336;
+  }
+  table.table td i {
+    font-size: 19px;
+  }
+
+  /* Modal styles */
+  .modal .modal-dialog {
+  	max-width: 400px;
+  }
+  .modal .modal-header, .modal .modal-body, .modal .modal-footer {
+  	padding: 20px 30px;
+  }
+  .modal .modal-content {
+  	border-radius: 3px;
+  }
+  .modal .modal-footer {
+  	background: #ecf0f1;
+  	border-radius: 0 0 3px 3px;
+  }
+  .modal .modal-title {
+    display: inline-block;
+  }
+  .modal .form-control {
+  	border-radius: 2px;
+  	box-shadow: none;
+  	border-color: #dddddd;
+  }
+  .modal textarea.form-control {
+  	resize: vertical;
+  }
+  .modal .btn {
+  	border-radius: 2px;
+  	min-width: 100px;
+  }
+  .modal form label {
+  	font-weight: normal;
+  }
+
+  /* Para el navbar */
+  ul {
+    list-style-type: none;
+    margin: 100;
+    padding: 1px 250px;
+    overflow: hidden;
+    background-color: #dddddd;
+  	font-family: 'Verdana';
+  	font-size: 15px;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    padding: 20px;
+  }
+
+  le {
+    float: right;
+  }
+
+  /* https://codepen.io/HarlemSquirrel/pen/NdMebZ */
+
+  body.dark-mode {
+    background-color: #2E4053;
+    color: black;
+    a {
+      color: blue;
+    }
+    b {
+      color:black;
+    }
+    navbar-custom {
+      color: black;
+      background-color: black;
+    }
+    moonbutton {
+      background-color: white;
+      color: gray;
+    }
+  }
+
+  body.light-mode {
+    background-color: white;
+    color: black;
+    a {
+      color: black;
+    }
+    moonbutton {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .boton-uno {
+    background-color: DodgerBlue;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 16px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+
+  /* Darker background on mouse-over */
+  .boton-uno:hover {
+    background-color: RoyalBlue;
+  }
+
+
+</style>
+
+</head>
+
+  <ul>
+  <li><a href="/pelis/buscador">Inicio</a></li>
+  <button class="boton-uno" name="dark_light" onclick="toggleDarkLight()" style="float: right; margin-top: 12px; ">
+    <i class="fa fa-moon-o" aria-hidden="true"></i></button>
+  </ul>
+
+  <body id="mybody" class="light-mode">
+
+    {% block crud %}
+    {% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+     function toggleDarkLight() {
+       var body = document.getElementById("mybody");
+       var currentClass = body.className;
+       body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+     }
+   </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+Django>=2.0,<3.0
+requests==2.21.0
+mongoengine==0.16
+django-allauth==0.39.1
+djangorestframework==3.9.4
+django-rest-framework-mongoengine==3.3.1
+django-cors-headers
+gunicorn

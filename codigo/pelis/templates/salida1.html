@@ -1,0 +1,25 @@
+{% extends "mainSalida1.html" %}
+{% block contenido %}
+
+  <div class="container">
+
+    <b>Se han encontrado {{ resultados }} películas</b>
+
+    <table class="table" border="">
+      <thead>
+      <tr>
+        <th> Título </th>
+        <th> Año </th>
+      </tr>
+      </thead>
+
+      {% for l in lista %}
+        <tr>
+          <td> {{ l.title }} </td>
+          <td> {{ l.year }} </td>
+        </tr>
+      {% endfor %}
+
+    </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+{% block contenido %}
+
+    <table class="table" border="">
+      <tr>
+        <th> Titulo </th>
+        <th> Año </th>
+      </tr>
+
+      {% for l in lista %}
+        <tr>
+          <td> {{ l.title }} </td>
+          <td> {{ l.year }} </td>
+        </tr>
+      {% endfor %}
+
+    </table>
+
+{% endblock %}
