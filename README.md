@@ -56,7 +56,7 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 10: JavaScript, jQuery](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2010): para la realización de esta tarea se ha añadido un botón para poner la pantalla en modo 'nocturno' cambiando los colores del CSS de las vistas hechas hasta ahora.
 
 
-- [Tarea 11: AJAX, ES6 fetch](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2011)
+- [Tarea 11: AJAX, ES6 fetch](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2011): se ha añadido un botón de _like_ y _dislike_ para cada película, en la página de información de la película para votarla (http://localhost:8000/pelis/informacion_pelicula/5b107bec1d2952d0da9046e1).
 
 
 - [Tarea 12: API REST](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2012): se ha añadido un API REST a la aplicación y las funciones necesarias para responder a las peticiones GET, PUT, POST y DELETE, para ello se han creado dos funciones. En donde `api_pelis(request)` es una función para la API que lista todas las películas con GET y permite añadir con POST (http://localhost:8000/pelis/api_pelis) y `api_peli(request, id)`: función para la API que permite listar todas las películas con GET, modificarlas con PUT y/o borrarlas con DELETE (http://localhost:8000/pelis/api_peli/5b107bec1d2952d0da90471f). Pero como manejar así POST, PUT y DELETE es más complicado, se hace uso de DJANGO REST Framework, en donde se hace el mismo funcionamiento explicado, solo que haciendo uso de una interfaz gráfica:
