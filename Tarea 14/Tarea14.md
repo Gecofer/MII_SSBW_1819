@@ -122,6 +122,8 @@ echo -ip: $IP
 # sudo docker-compose up --build
 ~~~
 
-Y simplemente tenemos que acceder a http://40.121.70.119:8000/pelis/buscador:
+Y simplemente tenemos que acceder a http://40.121.70.119:8000/pelis/buscador o a https://40.121.70.119/pelis/buscador:
 
 ![](imagenes/2.png)
+
+![](imagenes/3.png)
