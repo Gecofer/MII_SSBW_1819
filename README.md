@@ -67,4 +67,4 @@ Repositorio para la asignatura de Sistemas Software Basados en Web del Máster d
 - [Tarea 13: Single Page Application con React](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2013): se crea un _front-end_ con React para la API de la Tarea 12 (http://localhost:8000/pelis/api_pelis), para acceder a dicho contenido debemos hacer `npm start` en la carpeta de **frontend** lo que nos abrirá la siguiente página http://localhost:3000/. Esta aplicación con React hace un GET de las películas a la API y las muestra.
 
 
-- [Tarea 14: Producción](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2014)
+- [Tarea 14: Producción](https://github.com/Gecofer/MII_SSBW_1819/tree/master/Tarea%2014): en esta tarea no usaremos el servidor de desarrollo de Django sino una aplicación dedicada a servir nuestro contenido, [gunicorn](https://gunicorn.org/), además se generará y desplegará en una máquina virtual en Microsoft Azure.
